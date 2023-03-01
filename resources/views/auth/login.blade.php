@@ -2,9 +2,9 @@
     <div class="container mx-auto">
         <div class="box p-10 sm:m-auto bg-cyan-600 ">
             <div class="flex justify-center">
-                <x-jet-authentication-card>
+                <x-authentication-card>
                     <x-slot name="logo">
-                        <x-jet-authentication-card-logo />
+                        <x-authentication-card-logo />
                     </x-slot>
                     
                     <x-jet-validation-errors class="mb-4" />
@@ -45,7 +45,7 @@
                             </x-jet-button>
                         </div>
                     </form>
-                </x-jet-authentication-card>
+                </x-authentication-card>
             </div>
         </div>
     </div>
