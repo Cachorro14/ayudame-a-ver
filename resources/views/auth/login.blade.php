@@ -45,6 +45,9 @@
                             </x-jet-button>
                         </div>
                     </form>
+                    <div class="flex justify-center mt-4">
+                        <a class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" href="register">Registrarse</a>
+                    </div>
                 </x-authentication-card>
             </div>
         </div>
