@@ -8,7 +8,12 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-
+            @foreach ($users as $user)
+            <tr>
+                <td>{{ $user->name}}</td>
+                <td>{{ $user->restaurant('nombre_lugar')}}</td>
+            </tr>
+        @endforeach
             </div>
         </div>
     </div>
