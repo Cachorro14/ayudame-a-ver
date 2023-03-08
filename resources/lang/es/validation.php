@@ -30,7 +30,7 @@ return [
         'array'   => 'El campo :attribute debe contener entre :min y :max elementos.',
     ],
     'boolean'              => 'El campo :attribute debe ser verdadero o falso.',
-    'confirmed'            => 'El campo confirmación de contraseña no coincide.',
+    'confirmed'            => 'El campo confirmación de :attribute no coincide.',
     'date'                 => 'El campo :attribute no corresponde con una fecha válida.',
     'date_equals'          => 'El campo :attribute debe ser una fecha igual a :date.',
     'date_format'          => 'El campo :attribute no corresponde con el formato de fecha :format.',
@@ -130,8 +130,8 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'password' => [
+            'string' => 'custom-message',
         ],
     ],
 
