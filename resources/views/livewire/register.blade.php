@@ -7,8 +7,8 @@
             >
                 Crear usuario
             </h1>
-            <label class="block text-sm">
-                <span class="text-gray-700 dark:text-gray-400">Nombre</span>
+            <label class="block mt-4 text-sm">
+                <span class="text-gray-700 dark:text-gray-800">Nombre</span>
                 <input
                     class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-teal-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
                     placeholder="Juanito Peréz Prado"
@@ -21,15 +21,15 @@
                 }}</span
                 >@enderror
             </label>
-            <label class="block text-sm">
-                <span class="text-gray-700 dark:text-gray-400"
-                    >Correo Electrónico</span
+            <label class="block mt-4 text-sm">
+                <span class="text-gray-700 dark:text-gray-800"
+                >Correo Electrónico</span
                 >
                 <input
-                    class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-teal-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
-                    placeholder="ejemplo@ejemplo.com"
-                    type="email"
-                    wire:model="email"
+                class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-teal-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                placeholder="ejemplo@ejemplo.com"
+                type="email"
+                wire:model="email"
                 />
                 @error('email')
                 <span class="text-danger error text-red-500">{{
@@ -38,7 +38,35 @@
                 >@enderror
             </label>
             <label class="block mt-4 text-sm">
-                <span class="text-gray-700 dark:text-gray-400">Contraseña</span>
+                <span class="text-gray-700 dark:text-gray-800">Nombre del establecimiento</span>
+                <input
+                    class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-teal-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                    placeholder="La flor de córdoba"
+                    type="text"
+                    wire:model="name_rest"
+                />
+                @error('name_rest')
+                <span class="text-danger error text-red-500">{{
+                    $message
+                }}</span
+                >@enderror
+            </label>
+            <label class="block mt-4 text-sm">
+                <span class="text-gray-700 dark:text-gray-800">Nombre del establecimiento</span>
+                <input
+                    class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-teal-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                    placeholder="Insurgentes #5555 "
+                    type="text"
+                    wire:model="address"
+                />
+                @error('address')
+                <span class="text-danger error text-red-500">{{
+                    $message
+                }}</span
+                >@enderror
+            </label>
+            <label class="block mt-4 text-sm">
+                <span class="text-gray-700 dark:text-gray-800">Contraseña</span>
                 <input
                     class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-teal-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
                     type="password"
@@ -51,7 +79,7 @@
                 >@enderror
             </label>
             <label class="block mt-4 text-sm">
-                <span class="text-gray-700 dark:text-gray-400"
+                <span class="text-gray-700 dark:text-gray-800"
                     >Confirmar Contraseña</span
                 >
                 <input

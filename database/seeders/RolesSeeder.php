@@ -24,11 +24,6 @@ class RolesSeeder extends Seeder
         $role->name = 'user';
         $role->guard_name = 'usuario';
         $role->save();
-
-        $role = new Role();
-        $role->name = 'restauran';
-        $role->guard_name = 'restaurante';
-        $role->save();
     }
 
 }

@@ -19,7 +19,6 @@
     <body
         style="background: #edf2f7"
     >
-        @include('layouts.navbar')
         @yield('content')
         @yield('scripts')
         

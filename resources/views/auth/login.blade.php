@@ -48,6 +48,9 @@
                     <div class="flex justify-center mt-4">
                         <a class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" href="register">Registrarse</a>
                     </div>
+                    <div class="flex mt-4">
+                        <a class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" href="inicio">↼ Inicio</a>
+                    </div>
                 </x-authentication-card>
             </div>
         </div>

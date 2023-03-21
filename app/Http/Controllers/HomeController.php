@@ -12,12 +12,4 @@ class HomeController extends Controller
     $users = User::all();
     return view('dashboard',compact('users'));
     }
-
-    public function logout()
-    {
-        
-        Auth::logout();
-
-        return redirect('');
-    }
 }
