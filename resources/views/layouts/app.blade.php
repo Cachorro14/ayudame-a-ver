@@ -8,6 +8,12 @@
             rel="stylesheet"
             href="{{ asset('assets/css/tailwind.output.css') }}"
         />
+        
+        <link
+            rel="stylesheet"
+            href="{{ asset('assets/css/loaders.css') }}"
+        />
+        
         <link
             rel="shortcut icon"
             href="{{ asset('assets/img/AYUDAME2.ico') }}"
@@ -15,8 +21,12 @@
 
         <title>Ayudame a ver</title>
 
+        
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
+
+        {{-- Sweet Alert --}}
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -49,5 +59,15 @@
         @stack('modals')
 
         @livewireScripts
+
+        <script>
+            window.addEventListener("swal:alert", (event) => {
+                Swal.fire({
+                    icon: event.detail.icon,
+                    title: event.detail.title,
+                    text: event.detail.text,
+                });
+            });
+        </script>
     </body>
 </html>

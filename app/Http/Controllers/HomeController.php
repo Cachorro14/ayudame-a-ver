@@ -9,7 +9,21 @@ use App\Models\User;
 class HomeController extends Controller
 {
     public function index(){
-    $users = User::all();
-    return view('dashboard',compact('users'));
+        if(Auth::check()){
+            return view('main-pages/dashboard');
+        }else{
+            return view('main-pages/inicio');
+        }
+    }
+
+    public function texts(){
+        $user =auth()->user();
+        $archivos = $user->archivos()->get();
+        return view('main-pages/textos',compact('user','archivos'));
+    }
+    public function braille(){
+        $user =auth()->user();
+        $archivos = $user->archivos()->get();
+        return view('main-pages/braille',compact('user','archivos'));
     }
 }

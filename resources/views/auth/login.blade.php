@@ -1,6 +1,6 @@
 <x-guest-layout>
     <div class="container mx-auto">
-        <div class="box p-10 sm:m-auto bg-cyan-600 ">
+        <div class="box p-10 sm:m-auto">
             <div class="flex justify-center">
                 <x-authentication-card>
                     <x-slot name="logo">
@@ -49,7 +49,7 @@
                         <a class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" href="register">Registrarse</a>
                     </div>
                     <div class="flex mt-4">
-                        <a class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" href="inicio">↼ Inicio</a>
+                        <a class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" href="/">↼ Inicio</a>
                     </div>
                 </x-authentication-card>
             </div>

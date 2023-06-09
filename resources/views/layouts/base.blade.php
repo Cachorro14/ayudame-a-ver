@@ -8,6 +8,10 @@
             rel="stylesheet"
             href="{{ asset('assets/css/tailwind.output.css') }}"
         />
+        <link
+            rel="stylesheet"
+            href="{{ asset('assets/css/loaders.css') }}"
+        />
         <link rel="shortcut icon" href="{{asset('assets/img/AYUDAME2.ico')}}">
         <script
             src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"

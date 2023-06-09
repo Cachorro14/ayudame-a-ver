@@ -38,38 +38,11 @@
                 >@enderror
             </label>
             <label class="block mt-4 text-sm">
-                <span class="text-gray-700 dark:text-gray-800">Nombre del establecimiento</span>
-                <input
-                    class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-teal-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
-                    placeholder="La flor de córdoba"
-                    type="text"
-                    wire:model="name_rest"
-                />
-                @error('name_rest')
-                <span class="text-danger error text-red-500">{{
-                    $message
-                }}</span
-                >@enderror
-            </label>
-            <label class="block mt-4 text-sm">
-                <span class="text-gray-700 dark:text-gray-800">Nombre del establecimiento</span>
-                <input
-                    class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-teal-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
-                    placeholder="Insurgentes #5555 "
-                    type="text"
-                    wire:model="address"
-                />
-                @error('address')
-                <span class="text-danger error text-red-500">{{
-                    $message
-                }}</span
-                >@enderror
-            </label>
-            <label class="block mt-4 text-sm">
                 <span class="text-gray-700 dark:text-gray-800">Contraseña</span>
                 <input
                     class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-teal-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
                     type="password"
+                    placeholder="***********"
                     wire:model="password"
                 />
                 @error('password')
@@ -85,6 +58,7 @@
                 <input
                     class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-teal-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
                     type="password"
+                    placeholder="***********"
                     wire:model="confirmPass"
                 />
                 @error('confirmPass')

@@ -18,10 +18,13 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Documentos') }}
+                        {{ __('Archivos') }}
                     </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('documentos') }}" :active="request()->routeIs('documentos')">
-                        {{ __('Subir Documentos') }}
+                    <x-jet-nav-link href="{{ route('textos') }}" :active="request()->routeIs('textos')">
+                        {{ __('Documentos en texto') }}
+                    </x-jet-nav-link>
+                    <x-jet-nav-link href="{{ route('braille') }}" :active="request()->routeIs('braille')">
+                        {{ __('Documento en Braille') }}
                     </x-jet-nav-link>
                 </div>
             </div>
@@ -146,10 +149,13 @@
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
             <x-jet-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
+                {{ __('Archivos') }}
             </x-jet-responsive-nav-link>
-            <x-jet-responsive-nav-link href="{{ route('documentos') }}" :active="request()->routeIs('documentos')">
-                {{ __('Subir Documentos') }}
+            <x-jet-responsive-nav-link href="{{ route('textos') }}" :active="request()->routeIs('textos')">
+                {{ __('Documentos en texto') }}
+            </x-jet-responsive-nav-link>
+            <x-jet-responsive-nav-link href="{{ route('braille') }}" :active="request()->routeIs('braille')">
+                {{ __('Documentos en braille') }}
             </x-jet-responsive-nav-link>
         </div>
 
@@ -171,7 +177,7 @@
             <div class="mt-3 space-y-1">
                 <!-- Account Management -->
                 <x-jet-responsive-nav-link href="{{ route('profile.show') }}" :active="request()->routeIs('profile.show')">
-                    {{ __('Profile') }}
+                    {{ __('Perfil') }}
                 </x-jet-responsive-nav-link>
 
                 @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
@@ -186,7 +192,7 @@
 
                     <x-jet-responsive-nav-link href="{{ route('logout') }}"
                                    @click.prevent="$root.submit();">
-                        {{ __('Log Out') }}
+                        {{ __('Cerrar Sesion') }}
                     </x-jet-responsive-nav-link>
                 </form>
 

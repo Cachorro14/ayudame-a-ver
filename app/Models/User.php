@@ -62,10 +62,10 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
-
-    public function restaurant()
+    public function archivos()
     {
-        return $this->hasOne(Restaurant::class);
+        return $this->morphMany('App\Models\Archivo','archivo');
     }
+
 
 }
