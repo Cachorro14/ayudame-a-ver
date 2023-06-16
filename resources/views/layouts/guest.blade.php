@@ -28,4 +28,6 @@
         </div>
         @livewireScripts
     </body>
+    @yield('scripts')
+    <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
 </html>

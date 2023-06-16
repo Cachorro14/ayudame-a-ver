@@ -53,6 +53,16 @@ class Texts extends Component
         $archivos = $user->archivos()->get();
         $this->mount($archivos);
     }
+    public function borrarArchivoSinSweetAlert($archivo)
+    {
+        Storage::delete($archivo['hash']);
+        Archivo::destroy($archivo['id']);
+
+        //Refrescar la pagina
+        $user = auth()->user();
+        $archivos = $user->archivos()->get();
+        $this->mount($archivos);
+    }
 
     public function translateBraille($index){
         $user = auth()->user();

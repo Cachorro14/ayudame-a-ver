@@ -1,16 +1,16 @@
 <div>
-    <div class="w-full">
+    <div class="w-full max-w-md">
         <form wire:submit.prevent="saveUser" class="form-control p-3">
             @csrf
             <h1
-                class="mb-4 text-xl font-semibold text-gray-700 dark:text-gray-200"
+                class="mb-4 text-xl font-semibold text-gray-700 dark:text-gray-700"
             >
                 Crear usuario
             </h1>
             <label class="block mt-4 text-sm">
                 <span class="text-gray-700 dark:text-gray-800">Nombre</span>
                 <input
-                    class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-teal-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                    class="block w-full mt-1 text-sm dark:border-slate-100 dark:bg-slate-50 focus:border-grey-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input rounded-lg"
                     placeholder="Juanito Peréz Prado"
                     type="text"
                     wire:model="name"
@@ -26,7 +26,7 @@
                 >Correo Electrónico</span
                 >
                 <input
-                class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-teal-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                class="block w-full mt-1 text-sm dark:border-slate-100 dark:bg-slate-50 focus:border-grey-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input rounded-lg"
                 placeholder="ejemplo@ejemplo.com"
                 type="email"
                 wire:model="email"
@@ -40,7 +40,7 @@
             <label class="block mt-4 text-sm">
                 <span class="text-gray-700 dark:text-gray-800">Contraseña</span>
                 <input
-                    class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-teal-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                    class="block w-full mt-1 text-sm dark:border-slate-100 dark:bg-slate-50 focus:border-grey-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input rounded-lg"
                     type="password"
                     placeholder="***********"
                     wire:model="password"
@@ -56,7 +56,7 @@
                     >Confirmar Contraseña</span
                 >
                 <input
-                    class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-teal-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                    class="block w-full mt-1 text-sm dark:border-slate-100 dark:bg-slate-50 focus:border-grey-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input rounded-lg"
                     type="password"
                     placeholder="***********"
                     wire:model="confirmPass"
@@ -70,7 +70,8 @@
             <!-- You should use a button here, as the anchor is only used for the example  -->
             <button
                 type="submit"
-                class="block w-full px-4 py-2 mt-4 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 bg-teal-200 border border-transparent rounded-lg active:bg-teal-600 hover:bg-teal-700 focus:outline-none focus:shadow-outline-purple"
+                class="block w-full items-center mt-4 px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring focus:ring-gray-300 disabled:opacity-25 transition"
+                
             >
                 Registrarse
             </button>

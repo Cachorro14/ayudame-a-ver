@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Storage;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use thiagoalessio\TesseractOCR\TesseractOCR;
+use Spatie\PdfToText\Pdf;
+use Illuminate\Support\Facades\File;
 
 class Files extends Component
 {
@@ -32,7 +34,7 @@ class Files extends Component
                 $user->archivos()->create([
                     'nombre' => $file->getClientOriginalName(),
                     'hash' => $file->store('archivos'),
-                    'tipo' => $file->getClientOriginalExtension() == 'txt' ? 'otro' : 'texto',
+                    'tipo' => $file->getClientOriginalExtension() == 'txt' ? 'texto' : 'otro',
                     'mime' => $file->getMimeType(),
                     'extension' => '.' . $file->getClientOriginalExtension(),
                 ]);
@@ -60,17 +62,98 @@ class Files extends Component
         );
     }
 
-    public function madeText($archivo)
+    public function borrarArchivoSinSweetAlert($archivo)
     {
+        Storage::delete($archivo['hash']);
+        Archivo::destroy($archivo['id']);
+        
+        //Refrescar la pagina
+        $user = auth()->user();
+        $archivos = $user->archivos()->get();
+        $this->mount($archivos);
+    }
+
+    public function madeTextFromImage($archivo)
+    {
+
+        $user = auth()->user();
         // Ruta a la imagen que deseas analizar
-        $imagePath = storage_path($archivo['hash']);
+        $imagePath = storage_path('app/'.$archivo['hash']);
 
         // Crea una instancia de TesseractOCR y configúrala según sea necesario
-        $tesseract = new TesseractOCR($imagePath);
-        $tesseract->setLanguage('es'); // Establece el idioma del texto en la imagen (en este caso, inglés)
-
+        $ocr = new TesseractOCR('C:\Program Files\Tesseract-OCR\tesseract.exe');
+        $ocr->setLanguage('spa');
+         // Establece el idioma del texto en la imagen (en este caso, inglés)
+        $ocr->image($imagePath);
         // Realiza el reconocimiento óptico de caracteres en la imagen
-        $text = $tesseract->run();
-        // dd($text);
+        $textoExtraido = $ocr->run();
+
+        $extensiones = array(".pdf",".png",".jpg",".jpeg");
+
+        $remplazos = array("","","","");
+
+
+        $nombre = str_replace($extensiones, $remplazos, 'Texto-'.$archivo['nombre']);
+
+        $nombre = $nombre . '.txt';
+        
+        
+        $rutaArchivo = storage_path('app/texto/'.$nombre);
+        
+        File::put($rutaArchivo,$textoExtraido);
+
+        $rutaRelativa = str_replace(storage_path('app/'), '', $rutaArchivo);
+        
+        $user->archivos()->create([
+            'nombre' => $nombre,
+            'hash' => $rutaRelativa,
+            'tipo' => 'texto',
+            'mime' => 'text/plain',
+            'extension' => '.txt',
+        ]);
+
+        $this->dispatchBrowserEvent('swal:alert', [
+            'icon' => 'success',
+            'title' => '¡Se guardó el texto con éxito!',
+            'text' => 'Se guardó todo el texto corretamente',
+
+        ]);
+        
+        $this->borrarArchivoSinSweetAlert($archivo);
+    }
+
+    public function madeTextFromPdf($archivo){
+        
+        $user = auth()->user();
+        
+        $archivoPDF = storage_path('app/'.$archivo['hash']);
+        $text = (new Pdf('C:\laragon\bin\git\mingw64\bin\pdftotext'))
+        ->setPdf($archivoPDF)
+        ->text();
+
+        $nombre = str_replace('.pdf', '', 'Texto-'.$archivo['nombre']);
+        $nombre = $nombre . '.txt';
+        $rutaArchivo = storage_path('app/texto/'.$nombre);
+        
+        File::put($rutaArchivo,$text);
+
+        $rutaRelativa = str_replace(storage_path('app/'), '', $rutaArchivo);
+        
+        $user->archivos()->create([
+            'nombre' => $nombre,
+            'hash' => $rutaRelativa,
+            'tipo' => 'texto',
+            'mime' => 'text/plain',
+            'extension' => '.txt',
+        ]);
+
+        $this->dispatchBrowserEvent('swal:alert', [
+            'icon' => 'success',
+            'title' => '¡Se guardó el texto con éxito!',
+            'text' => 'Se guardó todo el texto corretamente',
+
+        ]);
+        $this->borrarArchivoSinSweetAlert($archivo);
+
     }
 }

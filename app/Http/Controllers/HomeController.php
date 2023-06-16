@@ -12,7 +12,7 @@ class HomeController extends Controller
         if(Auth::check()){
             return view('main-pages/dashboard');
         }else{
-            return view('main-pages/inicio');
+            return view('layouts/landing-page');
         }
     }
 

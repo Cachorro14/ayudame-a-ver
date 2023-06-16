@@ -21,4 +21,5 @@ Route::middleware([
     Route::get('/archivo-download/{hash}', [ArchivoController::class, 'download'])->name('archivo-download');
     
 });
+
 Route::get('/',[HomeController::class,'index'])->name('dashboard');

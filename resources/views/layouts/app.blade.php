@@ -16,6 +16,7 @@
         
         <link
             rel="shortcut icon"
+            class="rounded-lg"
             href="{{ asset('assets/img/AYUDAME2.ico') }}"
         />
 
@@ -69,5 +70,7 @@
                 });
             });
         </script>
+
+        <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
     </body>
 </html>

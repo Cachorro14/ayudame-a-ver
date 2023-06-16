@@ -2,7 +2,7 @@
     <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
         @if ($archivos)
             <h1 class="text-xl font-bold">Textos</h1>
-            <div class="grid grid-cols-4 gap-6 mt-5 p-4">
+            <div class="grid grid-cols-3 gap-6 mt-5 p-4 w-full">
                 @foreach ($archivos as $archivo)
                     @if ($archivo->extension == '.txt')
                         @if ($archivo->tipo != 'braille')

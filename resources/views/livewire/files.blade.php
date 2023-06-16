@@ -94,7 +94,10 @@
                             </div>
                             @if ($archivo->extension != '.pdf')
                                 <button class="bg-sky-500 hover:bg-sky-700 text-white font-bold py-2 px-4 rounded m-2"
-                                    wire:click="madeText({{ $archivo }})">Crear texto</button>
+                                    wire:click="madeTextFromImage({{ $archivo }})">Crear texto</button>
+                            @else
+                            <button class="bg-sky-500 hover:bg-sky-700 text-white font-bold py-2 px-4 rounded m-2"
+                                    wire:click="madeTextFromPdf({{ $archivo }})">Crear texto</button>
                             @endif
                         </div>
                     </div>
