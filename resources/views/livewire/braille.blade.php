@@ -2,15 +2,21 @@
     <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
         @if ($archivos)
             <h1 class="text-xl font-bold">Textos</h1>
-            <div class="grid grid-cols-4 gap-6 mt-5 p-4">
+            <div class="grid grid-cols-2 lg:grid-cols-5 sm:grid-cols-3 gap-3 mt-5 p-4">
                 @foreach ($archivos as $archivo)
                     @if ($archivo->extension == '.txt')
                         @if ($archivo->tipo == 'braille')
                             <div class="max-w-sm rounded overflow-hidden shadow-lg">
-                                <pre>{{ $textos[$loop->index] }}</pre>
+                                <img class="w-full" src="{{ asset('assets/img/imagen-para-braille.png') }}" alt="Placeholder Image">
                                 <div class="px-6 py-4">
                                     <p class="text-gray-700 text-base">{{ $archivo->nombre }}</p>
-                                    <div class="flex items-center justify-center">
+                                    <x-modal trigger-text="Mostrar"
+                                        trigger-class="bg-blue-500 text-white font-bold py-2 px-4 rounded"
+                                        title="{{ $archivo->nombre }}" button-text=""
+                                        button-class="hidden" button-route="">
+                                        <p>{{ $textos[$loop->index] }}</p>
+                                    </x-modal>
+                                    <div class="grid lg:flex items-center justify-center">
                                         <button
                                             class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded m-2"
                                             wire:click="borrarArchivo({{ $archivo }})" title="Eliminar"><svg

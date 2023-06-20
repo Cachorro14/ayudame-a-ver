@@ -14,7 +14,15 @@ class Files extends Component
 {
     use WithFileUploads;
 
-    public $files, $archivos;
+    public $files, $archivos,$isLoading = false, $texto;
+
+    public function rules()
+{
+    return [
+        'texto' => 'required',
+
+    ];
+}
 
     public function render()
     {
@@ -26,9 +34,9 @@ class Files extends Component
     public function saveFiles()
     {
         $user = auth()->user();
-        $this->validate([
-            'files.*' => 'required|file|max:10240|mimes:jpg,jpeg,png,pdf,txt',
-        ]);
+
+        $this->validate(['files.*' => 'required|file|max:10240|mimes:jpg,jpeg,png,pdf,txt',]);
+
         if ($this->files) {
             foreach ($this->files as $key => $file) {
                 $user->archivos()->create([
@@ -53,6 +61,7 @@ class Files extends Component
     {
         Storage::delete($archivo['hash']);
         Archivo::destroy($archivo['id']);
+
         $this->dispatchBrowserEvent('swal:alert',
             [
                 'icon' => 'success',
@@ -76,6 +85,7 @@ class Files extends Component
     public function madeTextFromImage($archivo)
     {
 
+ 
         $user = auth()->user();
         // Ruta a la imagen que deseas analizar
         $imagePath = storage_path('app/'.$archivo['hash']);
@@ -118,7 +128,8 @@ class Files extends Component
             'text' => 'Se guardó todo el texto corretamente',
 
         ]);
-        
+
+
         $this->borrarArchivoSinSweetAlert($archivo);
     }
 
@@ -153,7 +164,37 @@ class Files extends Component
             'text' => 'Se guardó todo el texto corretamente',
 
         ]);
+
         $this->borrarArchivoSinSweetAlert($archivo);
 
+    }
+    public function saveText(){
+        $this->validate();
+        $user = auth()->user();
+
+        $nombre = 'Texto escrito-'. count($user->archivos()->get()).'.txt';
+        
+        $rutaArchivo = storage_path('app/texto/'.$nombre);
+        
+        File::put($rutaArchivo,$this->texto);
+
+        $rutaRelativa = str_replace(storage_path('app/'), '', $rutaArchivo);
+        
+        $user->archivos()->create([
+            'nombre' => $nombre,
+            'hash' => $rutaRelativa,
+            'tipo' => 'texto',
+            'mime' => 'text/plain',
+            'extension' => '.txt',
+        ]);
+
+        $this->dispatchBrowserEvent('swal:alert', [
+            'icon' => 'success',
+            'title' => '¡Se guardó el texto con éxito!',
+            'text' => 'Se guardó todo el texto corretamente',
+
+        ]);
+
+        $this->texto = null;
     }
 }

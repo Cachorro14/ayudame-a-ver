@@ -75,7 +75,7 @@
             >
                 Registrarse
             </button>
-            <hr class="my-8" />
+            <hr class="my-3" />
         </form>
     </div>
     <div class="col-md-12">

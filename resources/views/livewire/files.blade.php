@@ -10,16 +10,19 @@
             Seleccionar archivo
         </label>
         @if ($files)
-            @foreach ($files as $file)
+            @foreach ($files as $index => $file)
                 <h1 class="text-lg">{{ $loop->index + 1 }}-. {{ $file->getClientOriginalName() }}</h1>
             @endforeach
         @else
             <h1 class="text-sm font-semibold">No hay archivos .....</h1>
-
         @endif
+        @error('files.*')
+            <span class="text-red-500 text-xs">{{ $message }}</span>
+        @enderror
+        
         <div class="relative border-dotted border-2 border-red-400 bg-white rounded-lg p-4">
-            <input class="absolute inset-0 z-50 m-0 p-0 w-full h-full outline-none opacity-0" type="file" id="fileInput"
-                wire:model="files" accept=".png, .jpg, .jpeg, .pdf, .txt" multiple>
+            <input class="absolute inset-0 z-50 m-0 p-0 w-full h-full outline-none opacity-0" type="file"
+                id="fileInput" wire:model="files" accept=".png, .jpg, .jpeg, .pdf, .txt" multiple>
             <div class="text-center">
                 <div class="flex flex-col items-center justify-center space-y-2">
                     <i class="fas fa-upload fa-3x text-gray-400"></i>
@@ -32,24 +35,38 @@
         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             wire:click="saveFiles">Subir</button>
     </div>
-    <div class="flex justify-center text-center" wire:loading wire:target="files">
-        <div class="spinner">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+
+    <div class="loader" wire:loading wire:target="files"></div>
+
+    <span
+        style="
+                display: block;
+                width: 100%;
+                border-bottom: 2px solid rgb(231, 234, 236);
+            "></span>
+
+    <div class="grid grid-cols-1 mt-4 mb-3 gap-2 items-center">
+        <label class="text-lg font-semibold px-2" for="texto">Agregar texto</label>
+        @error('texto')
+            <span class="text-red-500 text-xs">{{ $message }}</span>
+        @enderror
+        <textarea
+            class="border border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 rounded-md px-4 m-3"
+            type="text" name="texto" wire:model="texto" cols="30" rows="10"></textarea>
+        <div class="justify-center text-center mb-3">
+            <button wire:click="saveText"
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded justify-center w-1/3">Agregar
+                texto</button>
         </div>
     </div>
     <span
-            style="
+        style="
                 display: block;
                 width: 100%;
                 border-bottom: 2px solid rgb(231, 234, 236);
             "></span>
     @if ($archivos)
-    <h1 class="text-3xl font-bold">Archivos subidos</h1>
+        <h1 class="text-3xl font-bold">Archivos subidos</h1>
         <div class="grid grid-cols-4 gap-6 mt-5 p-4">
             @foreach ($archivos as $archivo)
                 @if ($archivo->extension != '.txt')
@@ -96,7 +113,7 @@
                                 <button class="bg-sky-500 hover:bg-sky-700 text-white font-bold py-2 px-4 rounded m-2"
                                     wire:click="madeTextFromImage({{ $archivo }})">Crear texto</button>
                             @else
-                            <button class="bg-sky-500 hover:bg-sky-700 text-white font-bold py-2 px-4 rounded m-2"
+                                <button class="bg-sky-500 hover:bg-sky-700 text-white font-bold py-2 px-4 rounded m-2"
                                     wire:click="madeTextFromPdf({{ $archivo }})">Crear texto</button>
                             @endif
                         </div>
