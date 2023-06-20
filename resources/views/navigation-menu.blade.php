@@ -6,10 +6,10 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="">
-                        <img class="w-10 h-10" src="{{asset('assets/img/AYUDAME2.png')}}" alt="Ayudame a ver">
+                        <img class="w-10 h-10 rounded-lg mx-3" src="{{asset('assets/img/AYUDAME2.png')}}" alt="Ayudame a ver">
                     </a>
                     <a
-                        href=""
+                        href="/"
                         class="text-lg font-semibold tracking-widest text-gray-200 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">
                         Ayudame a ver
                     </a>
