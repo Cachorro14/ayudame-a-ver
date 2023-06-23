@@ -60,7 +60,6 @@ return [
     'features' => [
         Features::termsAndPrivacyPolicy(),
         Features::profilePhotos(),
-        'max_profile_photo_size' => 5120,
         // Features::api(),
         // Features::teams(['invitations' => true]),
         Features::accountDeletion(),
