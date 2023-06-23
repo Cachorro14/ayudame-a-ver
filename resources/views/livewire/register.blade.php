@@ -10,7 +10,7 @@
             <label class="block mt-4 text-sm">
                 <span class="text-gray-700 dark:text-gray-800">Nombre</span>
                 <input
-                    class="block w-full mt-1 text-sm dark:border-slate-100 dark:bg-slate-50 focus:border-grey-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input rounded-lg"
+                    class="block w-full mt-1 text-sm dark:border-slate-100 dark:bg-slate-50 focus:border-grey-400 focus:outline-none focus:shadow-outline-purple focus:font-bold focus:text-gray-900 dark:text-gray-600 dark:focus:shadow-outline-gray form-input rounded-lg"
                     placeholder="Juanito Peréz Prado"
                     type="text"
                     wire:model="name"
@@ -26,7 +26,7 @@
                 >Correo Electrónico</span
                 >
                 <input
-                class="block w-full mt-1 text-sm dark:border-slate-100 dark:bg-slate-50 focus:border-grey-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input rounded-lg"
+                class="block w-full mt-1 text-sm dark:border-slate-100 dark:bg-slate-50 focus:border-grey-400 focus:outline-none focus:shadow-outline-purple focus:font-bold focus:text-gray-900 dark:text-gray-600 dark:focus:shadow-outline-gray form-input rounded-lg"
                 placeholder="ejemplo@ejemplo.com"
                 type="email"
                 wire:model="email"
@@ -40,7 +40,7 @@
             <label class="block mt-4 text-sm">
                 <span class="text-gray-700 dark:text-gray-800">Contraseña</span>
                 <input
-                    class="block w-full mt-1 text-sm dark:border-slate-100 dark:bg-slate-50 focus:border-grey-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input rounded-lg"
+                    class="block w-full mt-1 text-sm dark:border-slate-100 dark:bg-slate-50 focus:border-grey-400 focus:outline-none focus:shadow-outline-purple focus:font-bold focus:text-gray-900 dark:text-gray-600 dark:focus:shadow-outline-gray form-input rounded-lg"
                     type="password"
                     placeholder="***********"
                     wire:model="password"
@@ -56,7 +56,7 @@
                     >Confirmar Contraseña</span
                 >
                 <input
-                    class="block w-full mt-1 text-sm dark:border-slate-100 dark:bg-slate-50 focus:border-grey-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input rounded-lg"
+                    class="block w-full mt-1 text-sm dark:border-slate-100 dark:bg-slate-50 focus:border-grey-400 focus:outline-none focus:shadow-outline-purple focus:font-bold focus:text-gray-900 dark:text-gray-600 dark:focus:shadow-outline-gray form-input rounded-lg"
                     type="password"
                     placeholder="***********"
                     wire:model="confirmPass"

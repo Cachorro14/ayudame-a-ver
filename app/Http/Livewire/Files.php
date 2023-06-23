@@ -14,7 +14,7 @@ class Files extends Component
 {
     use WithFileUploads;
 
-    public $files, $archivos,$isLoading = false, $texto;
+    public $files, $archivos,$isLoading = false, $texto, $archivo=false;
 
     public function rules()
 {
@@ -28,6 +28,11 @@ class Files extends Component
     {
         $user = auth()->user();
         $this->archivos = $user->archivos()->get();
+	foreach ($this->archivos as $archivo) {
+            if($archivo->extension != '.txt'){
+                $this->archivo = true;
+            }
+        }
         return view('livewire.files');
     }
 
@@ -91,7 +96,7 @@ class Files extends Component
         $imagePath = storage_path('app/'.$archivo['hash']);
 
         // Crea una instancia de TesseractOCR y configúrala según sea necesario
-        $ocr = new TesseractOCR('C:\Program Files\Tesseract-OCR\tesseract.exe');
+        $ocr = new TesseractOCR('/usr/bin/tesseract');
         $ocr->setLanguage('spa');
          // Establece el idioma del texto en la imagen (en este caso, inglés)
         $ocr->image($imagePath);
@@ -138,7 +143,7 @@ class Files extends Component
         $user = auth()->user();
         
         $archivoPDF = storage_path('app/'.$archivo['hash']);
-        $text = (new Pdf('C:\laragon\bin\git\mingw64\bin\pdftotext'))
+        $text = (new Pdf('/usr/bin/pdftotext'))
         ->setPdf($archivoPDF)
         ->text();
 

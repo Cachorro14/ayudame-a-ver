@@ -65,7 +65,7 @@
                 width: 100%;
                 border-bottom: 2px solid rgb(231, 234, 236);
             "></span>
-    @if ($archivos)
+    @if ($archivo)
         <h1 class="text-3xl font-bold">Archivos subidos</h1>
         <div class="grid grid-cols-4 gap-6 mt-5 p-4">
             @foreach ($archivos as $archivo)
