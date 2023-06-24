@@ -79,7 +79,7 @@
                         @endif
                         <div class="px-6 py-4">
                             <p class="text-gray-700 text-base">{{ $archivo->nombre }}</p>
-                            <div class="flex items-center justify-center">
+                            <div class="grid lg:flex items-center justify-center">
                                 <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded m-2"
                                     wire:click="borrarArchivo({{ $archivo }})" title="Eliminar"><svg
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
@@ -109,13 +109,15 @@
                                     </svg>
                                 </a>
                             </div>
-                            @if ($archivo->extension != '.pdf')
-                                <button class="bg-sky-500 hover:bg-sky-700 text-white font-bold py-2 px-4 rounded m-2"
-                                    wire:click="madeTextFromImage({{ $archivo }})">Crear texto</button>
-                            @else
-                                <button class="bg-sky-500 hover:bg-sky-700 text-white font-bold py-2 px-4 rounded m-2"
-                                    wire:click="madeTextFromPdf({{ $archivo }})">Crear texto</button>
-                            @endif
+                            <div class="grid justify-center ">
+                                @if ($archivo->extension != '.pdf')
+                                    <button class="bg-sky-500 hover:bg-sky-700 text-white font-bold py-2 px-4 rounded m-2"
+                                        wire:click="madeTextFromImage({{ $archivo }})">Crear texto</button>
+                                @else
+                                    <button class="bg-sky-500 hover:bg-sky-700 text-white font-bold py-2 px-4 rounded m-2"
+                                        wire:click="madeTextFromPdf({{ $archivo }})">Crear texto</button>
+                                @endif
+                            </div>
                         </div>
                     </div>
                 @endif
