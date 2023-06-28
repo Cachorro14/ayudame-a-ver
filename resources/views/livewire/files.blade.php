@@ -32,7 +32,7 @@
         </div>
     </div>
     <div class="justify-center text-center mt-3 mb-3">
-        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded {{$buttonEnableFiles ? "" : "hidden" }}" 
             wire:click="saveFiles">Subir</button>
     </div>
 
@@ -55,7 +55,7 @@
             type="text" name="texto" wire:model="texto" cols="30" rows="10"></textarea>
         <div class="justify-center text-center mb-3">
             <button wire:click="saveText"
-                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded justify-center w-1/3">Agregar
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded justify-center w-1/3 {{$buttonEnableText ? "" : "hidden" }}">Agregar
                 texto</button>
         </div>
     </div>

@@ -1,6 +1,6 @@
 <x-guest-layout>
     <header class="fixed top-0 left-0 right-0 z-30 bg-gray-800 text-white">
-        <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
+        <nav class="border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800 bg-gray-800">
             <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
                 <a href="{{ route('dashboard') }}" class="flex items-center">
                     <img src="{{ asset('assets/img/AYUDAME2.png') }}" class="rounded-2xl mr-3 h-6 sm:h-9"
@@ -10,11 +10,11 @@
                 </a>
                 <div class="flex items-center lg:order-2">
                     <a href="login"
-                        class="bg-slate-900 text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:hover:bg-gray-500 focus:outline-none dark:focus:ring-gray-800">
+                        class="bg-slate-400 text-gray-6 dark:text-white hover:text-slate-800 hover:bg-gray-100 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:hover:bg-gray-500 dark:bg-slate-900 focus:outline-none dark:focus:ring-gray-800">
                         Iniciar sesión
                     </a>
                     <a href="register"
-                        class="flex text-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"><svg
+                        class="flex text-center text-white bg-blue-500 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:bg-blue-500 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"><svg
                             xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
                             <path
                                 d="M512 80c8.8 0 16 7.2 16 16V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16H512zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM208 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128zm-32 32c-44.2 0-80 35.8-80 80c0 8.8 7.2 16 16 16H304c8.8 0 16-7.2 16-16c0-44.2-35.8-80-80-80H176zM376 144c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24H376zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24H376z" />
@@ -23,7 +23,7 @@
                     <button data-collapse-toggle="mobile-menu-2" type="button"
                         class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                         aria-controls="mobile-menu-2" aria-expanded="false">
-                        <span class="sr-only">Open main menu</span>
+                        <span class="sr-only">Abrir menú</span>
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
@@ -41,23 +41,23 @@
                     <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
                         <li>
                             <button
-                                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 focus:text-white focus:outline-none lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                                class="block py-2 pr-4 pl-3 text-gray-400 border-b border-gray-100 hover:text-white hover:bg-gray-50 focus:text-white focus:outline-none lg:hover:bg-transparent lg:border-0 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                                 onclick="scrollToSection('section')">Inicio</button>
                         </li>
                         <li>
                             <button
-                                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 focus:text-white focus:outline-none lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                                class="block py-2 pr-4 pl-3 text-gray-400 border-b border-gray-100 hover:text-white hover:bg-gray-50 focus:text-white focus:outline-none lg:hover:bg-transparent lg:border-0 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                                 onclick="scrollToSection('section1')">Braille</button>
                         </li>
                         <li>
                             <button
-                                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 focus:text-white focus:outline-none lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                                class="block py-2 pr-4 pl-3 text-gray-400 border-b border-gray-100 hover:text-white hover:bg-gray-50 focus:text-white focus:outline-none lg:hover:bg-transparent lg:border-0 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                                 onclick="scrollToSection('section2')">¿Qué es Ayudame a ver?</button>
                         </li>
 
                         <li>
                             <button
-                                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 focus:text-white focus:outline-none lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                                class="block py-2 pr-4 pl-3 text-gray-400 border-b border-gray-100 hover:text-white hover:bg-gray-50 focus:text-white focus:outline-none lg:hover:bg-transparent lg:border-0 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                                 onclick="scrollToSection('section4')">Contacto</button>
                         </li>
 
@@ -67,7 +67,7 @@
         </nav>
     </header>
 
-    <section class="bg-white dark:bg-gray-900 sm:mt-9" id="section">
+    <section class="bg-slate-200 dark:bg-gray-900 sm:mt-9" id="section">
         <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
             <div class="mr-auto place-self-center lg:col-span-7">
                 <h1 class="max-w-2xl mb-4 text-4xl font-extrabold leading-none md:text-5xl xl:text-6xl dark:text-white">
@@ -92,7 +92,7 @@
         </div>
     </section>
 
-    <section class="bg-white dark:bg-gray-900">
+    <section class="bg-slate-200 dark:bg-gray-900">
         <div class="py-8 lg:py-16 mx-auto max-w-screen-xl px-4">
             <h2
                 class="mb-8 lg:mb-16 text-3xl font-extrabold tracking-tight leading-tight text-center text-gray-900 dark:text-white md:text-4xl">
@@ -111,15 +111,15 @@
 
         </div>
     </section>
-    <section class="bg-gray-50 dark:bg-gray-800" id="section1">
+    <section class="bg-slate-400 dark:bg-gray-800" id="section1">
         <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
             <div class="max-w-screen-md mb-8 lg:mb-16">
                 <h2 class="mb-4 text-4xl font-extrabold text-gray-900 dark:text-white">Braille</h2>
-                <p class="text-gray-500 sm:text-xl dark:text-gray-400">Un poco como la historia de como el braille
+                <p class="text-gray-600 sm:text-xl dark:text-gray-400">Un poco como la historia de como el braille
                     comenzo y que bases tomo para usarse, ademas de lo que es y en que consiste.</p>
             </div>
             <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
-                <div>
+                <div class="bg-slate-300 rounded-lg p-3">
                     <div
                         class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-100 lg:h-12 lg:w-12 dark:bg-blue-900">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -129,13 +129,13 @@
                         </svg>
                     </div>
                     <h3 class="mb-2 text-xl font-bold dark:text-white">Historia</h3>
-                    <p class="text-gray-500 dark:text-gray-400">Es un sistema de lectura y escritura táctil pensado
+                    <p class="text-gray-600 dark:text-gray-400">Es un sistema de lectura y escritura táctil pensado
                         para
                         personas ciegas. Se conoce también como cecografía. Fue ideado
                         a mediados del siglo xix por el francés Louis Braille (1809-1852), que se quedó ciego debido a
                         un accidente durante su niñez mientras jugaba en el taller de su padre.</p>
                 </div>
-                <div>
+                <div class="bg-slate-300 rounded-lg p-3">
                     <div
                         class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-100 lg:h-12 lg:w-12 dark:bg-blue-900">
                         <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -145,14 +145,14 @@
                         </svg>
                     </div>
                     <h3 class="mb-2 text-xl font-bold dark:text-white">Alfabeto español</h3>
-                    <p class="text-gray-500 dark:text-gray-400">a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r,
+                    <p class="text-gray-600 dark:text-gray-400">a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r,
                         s,
                         t, u, v, w, x, y, z, A
                     </p>
                     <br>
-                    <p class="text-gray-500 dark:text-gray-400">Caracteres especiales:</p>
+                    <p class="text-gray-600 dark:text-gray-400">Caracteres especiales:</p>
                     <br>
-                    <p class="text-gray-500 dark:text-gray-400">
+                    <p class="text-gray-600 dark:text-gray-400">
                         á , é , í , ó , ú , ü , ñ
                         '.', ',', ';', ':', '-',
                         '?', '!', '"', '(', ')', '*',
@@ -161,14 +161,14 @@
                         '[', ']', '@', '&', '¿', '¡'
                     </p>
                     <br>
-                    <p class="text-gray-500 dark:text-gray-400">Numeros:</p>
+                    <p class="text-gray-600 dark:text-gray-400">Numeros:</p>
                     <br>
-                    <p class="text-gray-500 dark:text-gray-400">
+                    <p class="text-gray-600 dark:text-gray-400">
                         1, 2, 3, 4, 5, 6, 7, 8, 9, 0
                     </p>
                 </div>
 
-                <div>
+                <div class="bg-slate-300 rounded-lg p-3">
                     <div
                         class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-100 lg:h-12 lg:w-12 dark:bg-blue-900">
                         <svg class="w-5 h-5 text-blue-600 lg:w-6 lg:h-6 dark:text-blue-300"
@@ -179,12 +179,12 @@
                         </svg>
                     </div>
                     <h3 class="mb-2 text-xl font-bold dark:text-white">Braille español</h3>
-                    <p class="text-gray-500 dark:text-gray-400">En el braille español, los códigos de las letras
+                    <p class="text-gray-600 dark:text-gray-400">En el braille español, los códigos de las letras
                         minúsculas, la mayoría de los signos de puntuación, algunos caracteres
                         especiales y algunas palabras se codifican directamente con una celda, pero las mayúsculas (⠨) y
                         números (⠼) son representados combinando las letras con otro símbolo previo.</p>
                 </div>
-                <div>
+                <div class="bg-slate-300 rounded-lg p-3">
                     <div
                         class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-100 lg:h-12 lg:w-12 dark:bg-blue-900">
                         <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -194,14 +194,14 @@
                         </svg>
                     </div>
                     <h3 class="mb-2 text-xl font-bold dark:text-white">Dia del Braille</h3>
-                    <p class="text-gray-500 dark:text-gray-400">El 4 de enero se celebra a nivel mundial el día del
+                    <p class="text-gray-600 dark:text-gray-400">El 4 de enero se celebra a nivel mundial el día del
                         sistema de lectura y escritura braille.
                         La celebración de este tiene por objetivo hacer conciencia sobre la integración de las personas
                         que tienen
                         discapacidad visual y que se desenvuelvan en igualdad de condiciones sin ningún tipo de
                         discriminación.</p>
                 </div>
-                <div>
+                <div class="bg-slate-300 rounded-lg p-3">
                     <div
                         class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-100 lg:h-12 lg:w-12 dark:bg-blue-900">
                         <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512">
@@ -211,13 +211,13 @@
                         </svg>
                     </div>
                     <h3 class="mb-2 text-xl font-bold dark:text-white">Alfabeto Braille</h3>
-                    <p class="text-gray-500 dark:text-gray-400">"⠁","⠃","⠉","⠙","⠑","⠋","⠛","⠓","⠊","⠚",
+                    <p class="text-gray-600 dark:text-gray-400">"⠁","⠃","⠉","⠙","⠑","⠋","⠛","⠓","⠊","⠚",
                         "⠅","⠇","⠍","⠝","⠕","⠏","⠟","⠗","⠎","⠞",
                         "⠥","⠧","⠺","⠭","⠽","⠵","⠨⠁"</p>
                     <br>
-                    <p class="text-gray-500 dark:text-gray-400">Caracteres especiales:</p>
+                    <p class="text-gray-600 dark:text-gray-400">Caracteres especiales:</p>
                     <br>
-                    <p class="text-gray-500 dark:text-gray-400">
+                    <p class="text-gray-600 dark:text-gray-400">
                         "⠷","⠮","⠌","⠬","⠾","⠳","⠻"
                         "⠄", "⠂", "⠆", "⠒", "⠤",
                         "⠢", "⠖", "⠦", "⠣", "⠜", "⠔",
@@ -226,13 +226,13 @@
                         "⠷", "⠾", "⠐", "⠠⠯", "⠢", "⠖"
                     </p>
                     <br>
-                    <p class="text-gray-500 dark:text-gray-400">Numeros:</p>
+                    <p class="text-gray-600 dark:text-gray-400">Numeros:</p>
                     <br>
-                    <p class="text-gray-500 dark:text-gray-400">
+                    <p class="text-gray-600 dark:text-gray-400">
                         ⠼⠁, ⠼⠃, ⠼⠉, ⠼⠙, ⠼⠑, ⠼⠋, ⠼⠛, ⠼⠓, ⠼⠊, ⠼⠚
                     </p>
                 </div>
-                <div>
+                <div class="bg-slate-300 rounded-lg p-3">
                     <div
                         class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-100 lg:h-12 lg:w-12 dark:bg-blue-900">
                         <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512">
@@ -242,7 +242,7 @@
                         </svg>
                     </div>
                     <h3 class="mb-2 text-xl font-bold dark:text-white">¿Qué es el braille?</h3>
-                    <p class="text-gray-500 dark:text-gray-400">El braille es un alfabeto, con el que pueden
+                    <p class="text-gray-600 dark:text-gray-400">El braille es un alfabeto, con el que pueden
                         representarse las letras, los signos de puntuación, los números, la grafía científica, los
                         símbolos matemáticos, la música.
                         Este consiste en seis puntos en relieve organizados como una matriz de tres filas por dos
@@ -267,18 +267,18 @@
         </div>
     </section>
 
-    <section class="bg-white dark:bg-gray-900" id="section2">
+    <section class="bg-slate-200 dark:bg-gray-900" id="section2">
         <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
             <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
                 <h2 class="mb-4 text-4xl font-extrabold text-gray-900 dark:text-white">¿Qué es Ayudame a ver?
                 </h2>
-                <p class="mb-4">Somos una página en la cual te ayudará a poder traducir de forma más sencilla tus
+                <p class="mb-4 font-semibold">Somos una página en la cual te ayudará a poder traducir de forma más sencilla tus
                     documentos que necesites en braille y así crear un ambiente más incluyente en tu establecimiento
                 </p>
-                <p class="mb-4">Te ayudaremos a que sea más fácil e intuitivo para ti crear estos documentos. Además,
+                <p class="mb-4 font-semibold">Te ayudaremos a que sea más fácil e intuitivo para ti crear estos documentos. Además,
                     tendrás las opciones de poder manipular los documentos aquí mismo.
                 </p>
-                <p>Solo crea tu cuenta y empezamos a trabajar con tus documentos lo antes posible.
+                <p class="font-semibold">Solo crea tu cuenta y empezamos a trabajar con tus documentos lo antes posible.
                 </p>
             </div>
             <div class="grid grid-cols-2 gap-4 mt-8">
@@ -289,11 +289,11 @@
         </div>
     </section>
 
-    <section class="bg-gray-50 dark:bg-gray-800" id="section3">
+    <section class="bg-slate-400 dark:bg-gray-800" id="section3">
         <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-            <div class="max-w-screen-lg text-gray-500 sm:text-lg dark:text-gray-400">
+            <div class="max-w-screen-lg text-gray-700 sm:text-lg dark:text-gray-400">
                 <h2 class="mb-4 text-4xl font-bold text-gray-900 dark:text-white">Contacto</h2>
-                <p class="mb-4 font-light">Sugerencias o dudas, envía un correo a <a class="font-bold text-blue-600" href="mailto:ayudameaver28@gmail.com">ayudameaver28@gmail.com</a>.</p>
+                <p class="mb-4 font-light te">Sugerencias o dudas, envía un correo a <a class="font-bold text-blue-600" href="mailto:ayudameaver28@gmail.com">ayudameaver28@gmail.com</a>.</p>
 
                 
             </div>
@@ -302,7 +302,7 @@
 
 
 
-    <footer class="p-4 bg-white dark:bg-gray-900 " id="section4">
+    <footer class="p-4 bg-slate-400 dark:bg-gray-900 " id="section4">
         <div class="mx-auto max-w-screen-xl">
             <div class="md:flex md:justify-between">
                 <div class="mb-6 md:mb-0">

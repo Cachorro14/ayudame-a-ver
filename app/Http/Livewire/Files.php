@@ -14,7 +14,7 @@ class Files extends Component
 {
     use WithFileUploads;
 
-    public $files, $archivos,$isLoading = false, $texto, $archivo=false;
+    public $files, $archivos,$isLoading = false, $texto, $archivo=false, $buttonEnableFiles=false,$buttonEnableText=false;
 
     public function rules()
 {
@@ -26,6 +26,12 @@ class Files extends Component
 
     public function render()
     {
+        if($this->files){
+            $this->buttonEnableFiles = true;
+        }
+        if($this->texto){
+            $this->buttonEnableText = true;
+        }
         $user = auth()->user();
         $this->archivos = $user->archivos()->get();
 	foreach ($this->archivos as $archivo) {
