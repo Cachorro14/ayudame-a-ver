@@ -11,7 +11,7 @@
                     <a
                         href="/"
                         class="text-lg font-semibold tracking-widest text-gray-200 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">
-                        Ayudame a ver
+                        Ayúdame a ver
                     </a>
                 </div>
 

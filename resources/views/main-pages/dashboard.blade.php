@@ -6,6 +6,7 @@
         <div class="py-10">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+                    <p class="text-lg">Aquí subirás los documento en formato PDF o bien imágenes para poder convertir a braille.</p>
                     <div class="dropzone">
                         <livewire:files />
                     </div>

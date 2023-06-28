@@ -20,7 +20,7 @@
             href="{{ asset('assets/img/AYUDAME2.ico') }}"
         />
 
-        <title>Ayudame a ver</title>
+        <title>Ayúdame a ver</title>
 
         
         <!-- Fonts -->

@@ -5,7 +5,7 @@
                 <a href="{{ route('dashboard') }}" class="flex items-center">
                     <img src="{{ asset('assets/img/AYUDAME2.png') }}" class="rounded-2xl mr-3 h-6 sm:h-9"
                         alt="Flowbite Logo" />
-                    <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Ayudame a
+                    <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Ayúdame a
                         ver</span>
                 </a>
                 <div class="flex items-center lg:order-2">
@@ -52,7 +52,7 @@
                         <li>
                             <button
                                 class="block py-2 pr-4 pl-3 text-gray-400 border-b border-gray-100 hover:text-white hover:bg-gray-50 focus:text-white focus:outline-none lg:hover:bg-transparent lg:border-0 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-                                onclick="scrollToSection('section2')">¿Qué es Ayudame a ver?</button>
+                                onclick="scrollToSection('section2')">¿Qué es Ayúdame a ver?</button>
                         </li>
 
                         <li>
@@ -71,7 +71,7 @@
         <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
             <div class="mr-auto place-self-center lg:col-span-7">
                 <h1 class="max-w-2xl mb-4 text-4xl font-extrabold leading-none md:text-5xl xl:text-6xl dark:text-white">
-                    Ayudame A ver</h1>
+                    Ayúdame A ver</h1>
                 <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">Una
                     página creada para poder ayudar a los establecimientos que quieren incluir a las personas con
                     dificultad de visión</p>
@@ -115,8 +115,8 @@
         <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
             <div class="max-w-screen-md mb-8 lg:mb-16">
                 <h2 class="mb-4 text-4xl font-extrabold text-gray-900 dark:text-white">Braille</h2>
-                <p class="text-gray-600 sm:text-xl dark:text-gray-400">Un poco como la historia de como el braille
-                    comenzo y que bases tomo para usarse, ademas de lo que es y en que consiste.</p>
+                <p class="text-gray-600 sm:text-xl dark:text-gray-400">Un poco como la historia de como el braille comenzó y que bases 
+                    tomó para usarse, además de lo que es y en qué consiste.</p>
             </div>
             <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
                 <div class="bg-slate-300 rounded-lg p-3">
@@ -132,7 +132,7 @@
                     <p class="text-gray-600 dark:text-gray-400">Es un sistema de lectura y escritura táctil pensado
                         para
                         personas ciegas. Se conoce también como cecografía. Fue ideado
-                        a mediados del siglo xix por el francés Louis Braille (1809-1852), que se quedó ciego debido a
+                        a mediados del siglo XIX por el francés Louis Braille (1809-1852), que se quedó ciego debido a
                         un accidente durante su niñez mientras jugaba en el taller de su padre.</p>
                 </div>
                 <div class="bg-slate-300 rounded-lg p-3">
@@ -193,7 +193,7 @@
                                 d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H64C28.7 64 0 92.7 0 128v16 48V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V192 144 128c0-35.3-28.7-64-64-64H344V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H152V24zM48 192h80v56H48V192zm0 104h80v64H48V296zm128 0h96v64H176V296zm144 0h80v64H320V296zm80-48H320V192h80v56zm0 160v40c0 8.8-7.2 16-16 16H320V408h80zm-128 0v56H176V408h96zm-144 0v56H64c-8.8 0-16-7.2-16-16V408h80zM272 248H176V192h96v56z" />
                         </svg>
                     </div>
-                    <h3 class="mb-2 text-xl font-bold dark:text-white">Dia del Braille</h3>
+                    <h3 class="mb-2 text-xl font-bold dark:text-white">Día del Braille</h3>
                     <p class="text-gray-600 dark:text-gray-400">El 4 de enero se celebra a nivel mundial el día del
                         sistema de lectura y escritura braille.
                         La celebración de este tiene por objetivo hacer conciencia sobre la integración de las personas
@@ -226,7 +226,7 @@
                         "⠷", "⠾", "⠐", "⠠⠯", "⠢", "⠖"
                     </p>
                     <br>
-                    <p class="text-gray-600 dark:text-gray-400">Numeros:</p>
+                    <p class="text-gray-600 dark:text-gray-400">Números:</p>
                     <br>
                     <p class="text-gray-600 dark:text-gray-400">
                         ⠼⠁, ⠼⠃, ⠼⠉, ⠼⠙, ⠼⠑, ⠼⠋, ⠼⠛, ⠼⠓, ⠼⠊, ⠼⠚
@@ -270,10 +270,10 @@
     <section class="bg-slate-200 dark:bg-gray-900" id="section2">
         <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
             <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-                <h2 class="mb-4 text-4xl font-extrabold text-gray-900 dark:text-white">¿Qué es Ayudame a ver?
+                <h2 class="mb-4 text-4xl font-extrabold text-gray-900 dark:text-white">¿Qué es Ayúdame a ver?
                 </h2>
                 <p class="mb-4 font-semibold">Somos una página en la cual te ayudará a poder traducir de forma más sencilla tus
-                    documentos que necesites en braille y así crear un ambiente más incluyente en tu establecimiento
+                    documentos que necesites en braille y así crear un ambiente más incluyente en tu establecimiento.
                 </p>
                 <p class="mb-4 font-semibold">Te ayudaremos a que sea más fácil e intuitivo para ti crear estos documentos. Además,
                     tendrás las opciones de poder manipular los documentos aquí mismo.
@@ -310,7 +310,7 @@
                         <img src="{{ asset('assets/img/AYUDAME2.png') }}" class="rounded-2xl mr-3 h-8"
                             alt="FlowBite Logo" />
                         <span
-                            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Ayudame a ver</span>
+                            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Ayúdame a ver</span>
                     </a>
                 </div>
                 <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
@@ -339,7 +339,7 @@
             <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
             <div class="sm:flex sm:items-center sm:justify-between">
                 <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="#"
-                        class="hover:underline">Ayudame A Ver</a>. Derechos Reservados.
+                        class="hover:underline">Ayúdame A Ver</a>. Derechos Reservados.
                 </span>
                 
             </div>
