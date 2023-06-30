@@ -119,7 +119,7 @@
                     tomó para usarse, además de lo que es y en qué consiste.</p>
             </div>
             <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
-                <div class="bg-slate-300 rounded-lg p-3">
+                <div class="bg-slate-300 rounded-lg p-3 dark:bg-gray-800">
                     <div
                         class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-100 lg:h-12 lg:w-12 dark:bg-blue-900">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -135,7 +135,7 @@
                         a mediados del siglo XIX por el francés Louis Braille (1809-1852), que se quedó ciego debido a
                         un accidente durante su niñez mientras jugaba en el taller de su padre.</p>
                 </div>
-                <div class="bg-slate-300 rounded-lg p-3">
+                <div class="bg-slate-300 rounded-lg p-3 dark:bg-gray-800">
                     <div
                         class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-100 lg:h-12 lg:w-12 dark:bg-blue-900">
                         <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -168,7 +168,7 @@
                     </p>
                 </div>
 
-                <div class="bg-slate-300 rounded-lg p-3">
+                <div class="bg-slate-300 rounded-lg p-3 dark:bg-gray-800">
                     <div
                         class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-100 lg:h-12 lg:w-12 dark:bg-blue-900">
                         <svg class="w-5 h-5 text-blue-600 lg:w-6 lg:h-6 dark:text-blue-300"
@@ -184,7 +184,7 @@
                         especiales y algunas palabras se codifican directamente con una celda, pero las mayúsculas (⠨) y
                         números (⠼) son representados combinando las letras con otro símbolo previo.</p>
                 </div>
-                <div class="bg-slate-300 rounded-lg p-3">
+                <div class="bg-slate-300 rounded-lg p-3 dark:bg-gray-800">
                     <div
                         class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-100 lg:h-12 lg:w-12 dark:bg-blue-900">
                         <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -201,7 +201,7 @@
                         discapacidad visual y que se desenvuelvan en igualdad de condiciones sin ningún tipo de
                         discriminación.</p>
                 </div>
-                <div class="bg-slate-300 rounded-lg p-3">
+                <div class="bg-slate-300 rounded-lg p-3 dark:bg-gray-800">
                     <div
                         class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-100 lg:h-12 lg:w-12 dark:bg-blue-900">
                         <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512">
@@ -232,7 +232,7 @@
                         ⠼⠁, ⠼⠃, ⠼⠉, ⠼⠙, ⠼⠑, ⠼⠋, ⠼⠛, ⠼⠓, ⠼⠊, ⠼⠚
                     </p>
                 </div>
-                <div class="bg-slate-300 rounded-lg p-3">
+                <div class="bg-slate-300 rounded-lg p-3 dark:bg-gray-800">
                     <div
                         class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-100 lg:h-12 lg:w-12 dark:bg-blue-900">
                         <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512">
