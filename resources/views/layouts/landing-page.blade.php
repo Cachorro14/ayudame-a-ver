@@ -10,16 +10,16 @@
                 </a>
                 <div class="flex items-center lg:order-2">
                     <a href="login"
-                        class="bg-slate-400 text-gray-6 dark:text-white hover:text-slate-800 hover:bg-gray-100 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:hover:bg-gray-500 dark:bg-slate-900 focus:outline-none dark:focus:ring-gray-800">
-                        Iniciar sesión
-                    </a>
-                    <a href="register"
-                        class="flex text-center text-white bg-blue-500 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:bg-blue-500 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"><svg
-                            xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
-                            <path
-                                d="M512 80c8.8 0 16 7.2 16 16V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16H512zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM208 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128zm-32 32c-44.2 0-80 35.8-80 80c0 8.8 7.2 16 16 16H304c8.8 0 16-7.2 16-16c0-44.2-35.8-80-80-80H176zM376 144c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24H376zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24H376z" />
-                        </svg>
-                        <span class="px-2"> Crear cuenta</span></a>
+                    class="lg:flex bg-slate-400 text-gray-6 dark:text-white hover:text-slate-800 hover:bg-gray-100 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:hover:bg-gray-500 dark:bg-slate-900 focus:outline-none dark:focus:ring-gray-800 hidden">
+                    Iniciar sesión
+                </a>
+                <a href="register"
+                    class="lg:flex text-center text-white bg-blue-500 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:bg-blue-500 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 hidden"><svg
+                        xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
+                        <path
+                            d="M512 80c8.8 0 16 7.2 16 16V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16H512zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM208 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128zm-32 32c-44.2 0-80 35.8-80 80c0 8.8 7.2 16 16 16H304c8.8 0 16-7.2 16-16c0-44.2-35.8-80-80-80H176zM376 144c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24H376zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24H376z" />
+                    </svg>
+                    <span class="px-2"> Crear cuenta</span></a>
                     <button data-collapse-toggle="mobile-menu-2" type="button"
                         class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                         aria-controls="mobile-menu-2" aria-expanded="false">
@@ -60,6 +60,22 @@
                                 class="block py-2 pr-4 pl-3 text-gray-400 border-b border-gray-100 hover:text-white hover:bg-gray-50 focus:text-white focus:outline-none lg:hover:bg-transparent lg:border-0 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                                 onclick="scrollToSection('section4')">Contacto</button>
                         </li>
+                        <li class="mt-5">
+                            <a href="login"
+                                class="bg-slate-400 text-gray-6 dark:text-white hover:text-slate-800 hover:bg-gray-100 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:hover:bg-gray-500 dark:bg-slate-900 focus:outline-none dark:focus:ring-gray-800 lg:hidden">
+                                Iniciar sesión
+                            </a>
+                        </li>
+                        <li class="mt-5">
+                            <a href="register"
+                                class="flex text-center text-white bg-blue-500 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:bg-blue-500 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 w-40 lg:hidden"><svg
+                                    xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
+                                    <path
+                                        d="M512 80c8.8 0 16 7.2 16 16V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16H512zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM208 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128zm-32 32c-44.2 0-80 35.8-80 80c0 8.8 7.2 16 16 16H304c8.8 0 16-7.2 16-16c0-44.2-35.8-80-80-80H176zM376 144c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24H376zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24H376z" />
+                                </svg>
+                                <span class="px-2"> Crear cuenta</span></a>
+
+                        </li>
 
                     </ul>
                 </div>
@@ -67,7 +83,7 @@
         </nav>
     </header>
 
-    <section class="bg-slate-200 dark:bg-gray-900 mt-14 lg:mt-0" id="section">
+    <section class="bg-slate-200 dark:bg-gray-900 mt-10 lg:mt-0" id="section">
         <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
             <div class="mr-auto place-self-center lg:col-span-7">
                 <h1 class="max-w-2xl mb-4 text-4xl font-extrabold leading-none md:text-5xl xl:text-6xl dark:text-white">
@@ -115,7 +131,8 @@
         <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
             <div class="max-w-screen-md mb-8 lg:mb-16">
                 <h2 class="mb-4 text-4xl font-extrabold text-gray-900 dark:text-white">Braille</h2>
-                <p class="text-gray-600 sm:text-xl dark:text-gray-400">Un poco como la historia de como el braille comenzó y que bases 
+                <p class="text-gray-600 sm:text-xl dark:text-gray-400">Un poco como la historia de como el braille
+                    comenzó y que bases
                     tomó para usarse, además de lo que es y en qué consiste.</p>
             </div>
             <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
@@ -272,13 +289,16 @@
             <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
                 <h2 class="mb-4 text-4xl font-extrabold text-gray-900 dark:text-white">¿Qué es Ayúdame a ver?
                 </h2>
-                <p class="mb-4 font-semibold">Somos una página en la cual te ayudará a poder traducir de forma más sencilla tus
+                <p class="mb-4 font-semibold">Somos una página en la cual te ayudará a poder traducir de forma más
+                    sencilla tus
                     documentos que necesites en braille y así crear un ambiente más incluyente en tu establecimiento.
                 </p>
-                <p class="mb-4 font-semibold">Te ayudaremos a que sea más fácil e intuitivo para ti crear estos documentos. Además,
+                <p class="mb-4 font-semibold">Te ayudaremos a que sea más fácil e intuitivo para ti crear estos
+                    documentos. Además,
                     tendrás las opciones de poder manipular los documentos aquí mismo.
                 </p>
-                <p class="font-semibold">Solo crea tu cuenta y empezamos a trabajar con tus documentos lo antes posible.
+                <p class="font-semibold">Solo crea tu cuenta y empezamos a trabajar con tus documentos lo antes
+                    posible.
                 </p>
             </div>
             <div class="grid grid-cols-2 gap-4 mt-8">
@@ -293,9 +313,11 @@
         <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
             <div class="max-w-screen-lg text-gray-700 sm:text-lg dark:text-gray-400">
                 <h2 class="mb-4 text-4xl font-bold text-gray-900 dark:text-white">Contacto</h2>
-                <p class="mb-4 font-light te">Sugerencias o dudas, envía un correo a <a class="font-bold text-blue-600" href="mailto:ayudameaver28@gmail.com">ayudameaver28@gmail.com</a>.</p>
+                <p class="mb-4 font-light te">Sugerencias o dudas, envía un correo a <a
+                        class="font-bold text-blue-600"
+                        href="mailto:ayudameaver28@gmail.com">ayudameaver28@gmail.com</a>.</p>
 
-                
+
             </div>
         </div>
     </section>
@@ -309,17 +331,18 @@
                     <a href="{{ route('dashboard') }}" class="flex items-center">
                         <img src="{{ asset('assets/img/AYUDAME2.png') }}" class="rounded-2xl mr-3 h-8"
                             alt="FlowBite Logo" />
-                        <span
-                            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Ayúdame a ver</span>
+                        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Ayúdame a
+                            ver</span>
                     </a>
                 </div>
                 <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-                    
+
                     <div>
                         <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Repositorio</h2>
                         <ul class="text-gray-600 dark:text-gray-400">
                             <li class="mb-4">
-                                <a href="https://github.com/Cachorro14/ayudame-a-ver" class="hover:underline ">Github</a>
+                                <a href="https://github.com/Cachorro14/ayudame-a-ver"
+                                    class="hover:underline ">Github</a>
                             </li>
                         </ul>
                     </div>
@@ -341,7 +364,7 @@
                 <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="#"
                         class="hover:underline">Ayúdame A Ver</a>. Derechos Reservados.
                 </span>
-                
+
             </div>
         </div>
     </footer>
