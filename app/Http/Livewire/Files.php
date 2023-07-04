@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\Archivo;
+use Carbon\Exceptions\Exception;
 use Illuminate\Support\Facades\Storage;
 use Livewire\Component;
 use Livewire\WithFileUploads;
@@ -102,12 +103,21 @@ class Files extends Component
         $imagePath = storage_path('app/'.$archivo['hash']);
 
         // Crea una instancia de TesseractOCR y configúrala según sea necesario
-        $ocr = new TesseractOCR('/usr/bin/tesseract');
-        $ocr->setLanguage('spa');
-         // Establece el idioma del texto en la imagen (en este caso, inglés)
-        $ocr->image($imagePath);
-        // Realiza el reconocimiento óptico de caracteres en la imagen
-        $textoExtraido = $ocr->run();
+        try {
+            $ocr = new TesseractOCR('/usr/bin/tesseract');
+            // Establece el idioma del texto en la imagen (en este caso, español)
+           // Realiza el reconocimiento óptico de caracteres en la imagen
+            $ocr->setLanguage('spa');
+            $ocr->image($imagePath);
+            $textoExtraido = $ocr->run();
+        } catch (Exception $e) {
+            $this->dispatchBrowserEvent('swal:alert', [
+                'icon' => 'error',
+                'title' => '¡No se pudó reconocer texto en la imagen!',
+                'text' => $e,
+    
+            ]);
+        }
 
         $extensiones = array(".pdf",".png",".jpg",".jpeg");
 
