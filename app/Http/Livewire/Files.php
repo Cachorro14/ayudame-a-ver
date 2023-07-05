@@ -15,28 +15,28 @@ class Files extends Component
 {
     use WithFileUploads;
 
-    public $files, $archivos,$isLoading = false, $texto, $archivo=false, $buttonEnableFiles=false,$buttonEnableText=false;
+    public $files, $archivos, $isLoading = false, $texto, $archivo = false, $buttonEnableFiles = false, $buttonEnableText = false;
 
     public function rules()
-{
-    return [
-        'texto' => 'required',
+    {
+        return [
+            'texto' => 'required',
 
-    ];
-}
+        ];
+    }
 
     public function render()
     {
-        if($this->files){
+        if ($this->files) {
             $this->buttonEnableFiles = true;
         }
-        if($this->texto){
+        if ($this->texto) {
             $this->buttonEnableText = true;
         }
         $user = auth()->user();
         $this->archivos = $user->archivos()->get();
-	foreach ($this->archivos as $archivo) {
-            if($archivo->extension != '.txt'){
+        foreach ($this->archivos as $archivo) {
+            if ($archivo->extension != '.txt') {
                 $this->archivo = true;
             }
         }
@@ -87,7 +87,7 @@ class Files extends Component
     {
         Storage::delete($archivo['hash']);
         Archivo::destroy($archivo['id']);
-        
+
         //Refrescar la pagina
         $user = auth()->user();
         $archivos = $user->archivos()->get();
@@ -97,81 +97,82 @@ class Files extends Component
     public function madeTextFromImage($archivo)
     {
 
- 
+
         $user = auth()->user();
         // Ruta a la imagen que deseas analizar
-        $imagePath = storage_path('app/'.$archivo['hash']);
+        $imagePath = storage_path('app/' . $archivo['hash']);
 
         // Crea una instancia de TesseractOCR y configúrala según sea necesario
         try {
             $ocr = new TesseractOCR('/usr/bin/tesseract');
             // Establece el idioma del texto en la imagen (en este caso, español)
-           // Realiza el reconocimiento óptico de caracteres en la imagen
+            // Realiza el reconocimiento óptico de caracteres en la imagen
             $ocr->setLanguage('spa');
             $ocr->image($imagePath);
             $textoExtraido = $ocr->run();
+
+            $extensiones = array(".pdf", ".png", ".jpg", ".jpeg");
+
+            $remplazos = array("", "", "", "");
+
+
+            $nombre = str_replace($extensiones, $remplazos, 'Texto-' . $archivo['nombre']);
+
+            $nombre = $nombre . '.txt';
+
+
+            $rutaArchivo = storage_path('app/texto/' . $nombre);
+
+            File::put($rutaArchivo, $textoExtraido);
+
+            $rutaRelativa = str_replace(storage_path('app/'), '', $rutaArchivo);
+
+            $user->archivos()->create([
+                'nombre' => $nombre,
+                'hash' => $rutaRelativa,
+                'tipo' => 'texto',
+                'mime' => 'text/plain',
+                'extension' => '.txt',
+            ]);
+
+            $this->dispatchBrowserEvent('swal:alert', [
+                'icon' => 'success',
+                'title' => '¡Se guardó el texto con éxito!',
+                'text' => 'Se guardó todo el texto corretamente',
+
+            ]);
+
+
+            $this->borrarArchivoSinSweetAlert($archivo);
         } catch (Exception $e) {
             // dd('error');
             $this->dispatchBrowserEvent('swal:alert', [
                 'icon' => 'error',
                 'title' => '¡No se pudó reconocer texto en la imagen!',
                 'text' => $e->getMessage(),
-    
+
             ]);
         }
-
-        $extensiones = array(".pdf",".png",".jpg",".jpeg");
-
-        $remplazos = array("","","","");
-
-
-        $nombre = str_replace($extensiones, $remplazos, 'Texto-'.$archivo['nombre']);
-
-        $nombre = $nombre . '.txt';
-        
-        
-        $rutaArchivo = storage_path('app/texto/'.$nombre);
-        
-        File::put($rutaArchivo,$textoExtraido);
-
-        $rutaRelativa = str_replace(storage_path('app/'), '', $rutaArchivo);
-        
-        $user->archivos()->create([
-            'nombre' => $nombre,
-            'hash' => $rutaRelativa,
-            'tipo' => 'texto',
-            'mime' => 'text/plain',
-            'extension' => '.txt',
-        ]);
-
-        $this->dispatchBrowserEvent('swal:alert', [
-            'icon' => 'success',
-            'title' => '¡Se guardó el texto con éxito!',
-            'text' => 'Se guardó todo el texto corretamente',
-
-        ]);
-
-
-        $this->borrarArchivoSinSweetAlert($archivo);
     }
 
-    public function madeTextFromPdf($archivo){
-        
+    public function madeTextFromPdf($archivo)
+    {
+
         $user = auth()->user();
-        
-        $archivoPDF = storage_path('app/'.$archivo['hash']);
-        $text = (new Pdf('/usr/bin/pdftotext'))
-        ->setPdf($archivoPDF)
-        ->text();
 
-        $nombre = str_replace('.pdf', '', 'Texto-'.$archivo['nombre']);
+        $archivoPDF = storage_path('app/' . $archivo['hash']);
+        $text = (new Pdf('/usr/bin/pdftotext'))
+            ->setPdf($archivoPDF)
+            ->text();
+
+        $nombre = str_replace('.pdf', '', 'Texto-' . $archivo['nombre']);
         $nombre = $nombre . '.txt';
-        $rutaArchivo = storage_path('app/texto/'.$nombre);
-        
-        File::put($rutaArchivo,$text);
+        $rutaArchivo = storage_path('app/texto/' . $nombre);
+
+        File::put($rutaArchivo, $text);
 
         $rutaRelativa = str_replace(storage_path('app/'), '', $rutaArchivo);
-        
+
         $user->archivos()->create([
             'nombre' => $nombre,
             'hash' => $rutaRelativa,
@@ -190,18 +191,19 @@ class Files extends Component
         $this->borrarArchivoSinSweetAlert($archivo);
 
     }
-    public function saveText(){
+    public function saveText()
+    {
         $this->validate();
         $user = auth()->user();
 
-        $nombre = 'Texto escrito-'. count($user->archivos()->get()).'.txt';
-        
-        $rutaArchivo = storage_path('app/texto/'.$nombre);
-        
-        File::put($rutaArchivo,$this->texto);
+        $nombre = 'Texto escrito-' . count($user->archivos()->get()) . '.txt';
+
+        $rutaArchivo = storage_path('app/texto/' . $nombre);
+
+        File::put($rutaArchivo, $this->texto);
 
         $rutaRelativa = str_replace(storage_path('app/'), '', $rutaArchivo);
-        
+
         $user->archivos()->create([
             'nombre' => $nombre,
             'hash' => $rutaRelativa,
