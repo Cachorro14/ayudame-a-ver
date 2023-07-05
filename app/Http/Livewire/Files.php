@@ -67,6 +67,7 @@ class Files extends Component
             ]);
         }
         $this->files = null;
+        $this->buttonEnableFiles = false;
     }
 
     public function borrarArchivo($archivo)
@@ -144,6 +145,7 @@ class Files extends Component
 
 
             $this->borrarArchivoSinSweetAlert($archivo);
+
         } catch (Exception $e) {
             // dd('error');
             $this->dispatchBrowserEvent('swal:alert', [
@@ -220,5 +222,6 @@ class Files extends Component
         ]);
 
         $this->texto = null;
+        $this->buttonEnableText = false;
     }
 }
