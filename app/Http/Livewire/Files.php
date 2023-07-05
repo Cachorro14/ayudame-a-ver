@@ -3,7 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\Archivo;
-use Carbon\Exceptions\Exception;
+use Exception;
 use Illuminate\Support\Facades\Storage;
 use Livewire\Component;
 use Livewire\WithFileUploads;
@@ -111,10 +111,11 @@ class Files extends Component
             $ocr->image($imagePath);
             $textoExtraido = $ocr->run();
         } catch (Exception $e) {
+            // dd('error');
             $this->dispatchBrowserEvent('swal:alert', [
                 'icon' => 'error',
                 'title' => '¡No se pudó reconocer texto en la imagen!',
-                'text' => $e,
+                'text' => $e->getMessage(),
     
             ]);
         }
