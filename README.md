@@ -16,8 +16,8 @@ Este proyecto permite la edición de imágenes utilizando inteligencia artificia
 
 Para ejecutar este proyecto, necesitas tener instalados los siguientes componentes:
 
-- **PHP >= 7.4**
-- **Laravel 8.x o superior**
+- **PHP >= 8.0.2**
+- **Laravel 10.x o superior**
 - **Tesseract OCR**: Para realizar el reconocimiento de texto en las imágenes.
 - **Composer**: Para manejar las dependencias de PHP.
 
